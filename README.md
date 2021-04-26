@@ -1,4 +1,4 @@
-there are 2 projects in this repo cekbpom_scraper and cekbpom_web.
+website link: http://rashid786.pythonanywhere.com/
 
 **1. cekbpom_scraper:**
 
@@ -8,7 +8,6 @@ scraper will scrape data from cekbpom website and directly dump to Mysql DB. i m
 - bs4
 
 Note: i can't translate the "Product Name" and "Product Type" because translate API give me limited words that's why i dump data into DB in actual language.
-
 
 
 **2. cekbpom_web**

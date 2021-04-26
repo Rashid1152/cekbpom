@@ -19,4 +19,7 @@ this is website which i build it into Django Framework. following things i have 
 - Integrated MySQL DB
 - Deploy website on Pythonanywhere.com 
 - Search functionality added and you can filter records using dropdown box + search box as well.
+
+
+if you have any question feel free to ask me: **rashid.aziz1152@gmail.com**
  

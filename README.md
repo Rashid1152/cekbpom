@@ -7,7 +7,7 @@ scraper will scrape data from cekbpom website and directly dump to Mysql DB. i m
 - requests
 - bs4
 
-Note: i can't translate the "Product Name" and "Product Type" because translate API give me limited words that's why i dump data into DB in actual language.
+Note: i couldn't translate the "Product Name" and "Product Type" in english because translate API give me limited words for free that's why i dumped data into DB in actual language.
 
 
 **2. cekbpom_web**

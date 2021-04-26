@@ -1,4 +1,4 @@
-there are 2 projects in this repo
+there are 2 projects in this repo cekbpom_scraper and cekbpom_web.
 
 **1. cekbpom_scraper:**
 

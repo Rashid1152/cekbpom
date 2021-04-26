@@ -1,0 +1,97 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Cekbpom</title>
+  </head>
+
+  <body>
+
+      <!-- Search Box -------------------->
+      <div class="container p-3 my-3 border">
+            <div class="row">
+                <form action={% url 'home' %}  method="POST">
+                    {% csrf_token %}
+                    <div class="col-xs-8 col-xs-offset-2">
+            		    <div class="input-group">
+
+                            <!-- Dropdown -------------------->
+                            <div class="input-group-btn search-panel">
+                                <select type="button" class="form-control dropdown-toggle" name='dropdown' data-toggle="dropdown">
+                                	<option>Product Name</option>
+                                    <option>Product</option>
+                                    <option>Brand</option>
+                                    <option>Registrant</option>
+                                    <option>Producer</option>
+                                </select>
+                            </div>
+
+                            <input type="hidden" name="search_param" value="all" id="search_param">
+                            <input type="text" class="form-control" name="search_param" placeholder="Search term...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span>Find</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+        	</div>
+        </div>
+
+
+    <div class="container p-3 my-3 border">
+		<h2>Cekbpom Products - {{ page_obj.paginator.count }}</h2><br>
+
+		<table class="table table-bordered">
+			<thead>
+			<tr>
+				<th>Product</th>
+				<th>Product Name</th>
+				<th>Brand</th>
+				<th>Registrant</th>
+				<th>Producer</th>
+				<th>Validity</th>
+			</tr>
+			</thead>
+			<tbody>
+			{% comment %} {% for product in products %} {% endcomment %}
+			{% for product in page_obj %}
+				<tr>
+					<td>{{product.type}}</td>
+					<td>{{product.name}}</td>
+					<td>{{product.brand}}</td>
+					<td>{{product.registrant}}</td>
+					<td>{{product.producer}}</td>
+					<td>{{product.validity}}</td>
+				</tr>
+			{% endfor %}
+
+			</tbody>
+		</table>
+
+        <!-- Bottom pagination -->
+		<div class="pagination">
+			<span class="step-links">
+				{% if page_obj.has_previous %}
+					<a class="btn btn-primary" href="?page=1">First</a>
+					<a class="btn btn-primary" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+				{% endif %}
+
+				<span class="current">
+					Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+				</span>
+
+				{% if page_obj.has_next %}
+					<a class="btn btn-primary" href="?page={{ page_obj.next_page_number }}">Next</a>
+					<a class="btn btn-primary" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+				{% endif %}
+			</span>
+		</div>
+
+	</div>
+  </body>
+</html>

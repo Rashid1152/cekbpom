@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'cekbpom_web.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'rashid786$cekbpom',
-        'USER': 'rashid786',
-        'PASSWORD': 'innersql786',
-        'HOST': 'rashid786.mysql.pythonanywhere-services.com',
+        'NAME': '<DATABASE NAME>',
+        'USER': 'USER NAME',
+        'PASSWORD': 'PASSWORD',
+        'HOST': 'HOST IP/URL',
         'PORT': '3306',
     }
 }

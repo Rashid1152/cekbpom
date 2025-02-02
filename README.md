@@ -6,6 +6,7 @@ A web application built using the Django Framework that allows users to interact
 - Database Integration : Integrated with MySQL for seamless data management.
 - Search Functionality : Includes advanced search and filtering options. Users can filter records using a dropdown menu combined with a search box.
 
+
 **2. cekbpom_scraper:**
 
 A web scraper designed to extract data from the cekbpom website and directly store it in a MySQL database. This scraper was built using the following technologies:

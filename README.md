@@ -1,24 +1,17 @@
-website link: http://rashid786.pythonanywhere.com/
+**2. cekbpom_web**
+A web application built using the Django Framework that allows users to interact with the scraped data. Below are the key features and tasks completed for this project:
+- Backend : Built using the Django Framework.
+- Frontend : Designed using Bootstrap 4 for a responsive and user-friendly interface.
+- Database Integration : Integrated with MySQL for seamless data management.
+- Search Functionality : Includes advanced search and filtering options. Users can filter records using a dropdown menu combined with a search box.
 
 **1. cekbpom_scraper:**
-
-scraper will scrape data from cekbpom website and directly dump to Mysql DB. i made this scraper using following technologies.
+A web scraper designed to extract data from the cekbpom website and directly store it in a MySQL database. This scraper was built using the following technologies:
 - Python
 - requests
-- bs4
-
-Note: i couldn't translate the "Product Name" and "Product Type" in english because translate API give me limited words for free that's why i dumped data into DB in actual language.
+- BeautifulSoup (bs4)
 
 
-**2. cekbpom_web**
-
-this is website which i build it into Django Framework. following things i have done in this task.
-- Build Backend in Django Framework
-- Build Frontend in Bootstrap 4
-- Integrated MySQL DB
-- Deploy website on Pythonanywhere.com 
-- Search functionality added and you can filter records using dropdown box + search box as well.
 
 
-if you have any question feel free to ask me: **rashid.aziz1152@gmail.com**
  
